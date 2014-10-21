@@ -35,7 +35,50 @@ public class DBAdapter
 	
 	public DBAdapter(Context ctx)
 	{
-		
+		this.context = ctx;
+		DBHelper = new DatabaseHelper(context);
 	}
 	
+	private static class DatabaseHelper extends SQLiteOpenHelper
+	{
+		DatabaseHelper(Context context)
+		{
+			super(context, DATABASE_NAME, null, DATABASE_VERSION);
+		}
+		
+		public void onCreate(SQLiteDatabase db)
+		{
+			db.execSQL(DATABASE_CREATE);
+		}
+		
+		@Override
+		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
+		{
+			Log.w(TAG, "Upgrading database from version " + oldVersion + "to " + newVersion + ", which will destroy all previous data");
+			db.execSQL("DROP TABLE IF EXISTS trans");
+			onCreate(db);
+		}			
+	}
+	
+	public DBAdapter open() throws SQLException
+	{
+		db = DBHelper.getWritableDatabase();
+		return this;
+	}
+	
+	public void close()
+	{
+		DBHelper.close();
+	}
+	
+	public long insertTrans(String date, String payee, String amount, String type, String category)
+	{
+		ContentValues initialValues = new ContentValues();
+		initialValues.put(KEY_DATE, date);
+		initialValues.put(KEY_PAYEE, payee);
+		initialValues.put(KEY_AMOUNT, amount);
+		initialValues.put(KEY_TYPE, type);
+		initialValues.put(KEY_CATEGORY, category);
+		return db.insert(DATABASE_TABLE, null, initialValues);
+	}
 }

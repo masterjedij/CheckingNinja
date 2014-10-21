@@ -1,152 +1,156 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/RelativeLayout1"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="edu.barella4730.checkingninja.Settings" >
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-
-    <Button
-        android:id="@+id/btnDropTable"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/lblSettings"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="Delete All Transactions"
-        android:textColor="#FF4444" />
-
-    <TextView
-        android:id="@+id/lblSettings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="5dp"
-        android:text="Settings"
-        android:textSize="25dp" />
-
-    <TextView
-        android:id="@+id/lblCatSettings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/btnDropTable"
-        android:layout_marginBottom="5dp"
-        android:text="Category Settings:"
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/lblAddCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/lblCatSettings"
-        android:layout_marginBottom="5dp"
-        android:text="Add a Category:"
-        android:textSize="15dp" />
-
-    <EditText
-        android:id="@+id/txtAddCategory"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnAddCategory"
-        android:layout_alignBottom="@+id/btnAddCategory"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/lblAddCategory"
-        android:ems="10" >
-
-        <requestFocus />
-    </EditText>
-
-    <TextView
-        android:id="@+id/lblChangeCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/txtAddCategory"
-        android:layout_marginTop="5dp"
-        android:text="Change Category:"
-        android:textSize="15dp" />
-
-    <Spinner
-        android:id="@+id/spnChangeCategory"
-        android:layout_width="150dp"
-        android:layout_height="32dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/lblChangeCategory" />
-
-    <Button
-        android:id="@+id/btnAddCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lblAddCategory"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@+id/txtAddCategory"
-        android:text="Add (+)" />
-     
-
-    <Button
-        android:id="@+id/btnChangeCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/txtChangeCategory"
-        android:layout_below="@+id/spnChangeCategory"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@+id/txtChangeCategory"
-        android:text="Change" />
-
-    <EditText
-        android:id="@+id/txtChangeCategory"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/spnChangeCategory"
-        android:layout_alignParentLeft="true"
-        android:ems="10" />
-
-    <Spinner
-        android:id="@+id/spnDeleteCategory"
-        android:layout_width="150dp"
-        android:layout_height="38dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/lblDeleteCategory" />
-
-    <EditText
-        android:id="@+id/txtDeleteCategory"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/spnDeleteCategory"
-        android:ems="10" />
-
-    <TextView
-        android:id="@+id/lblDeleteCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/txtChangeCategory"
-        android:layout_marginTop="5dp"
-        android:text="Delete Category:"
-        android:textSize="15dp" />
-
-    <Button
-        android:id="@+id/btnBack"
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:text="Back" />
+        android:layout_height="match_parent"
+        tools:context="edu.barella4730.checkingninja.Settings" >
 
-    <Button
-        android:id="@+id/btnDeleteCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/txtDeleteCategory"
-        android:layout_below="@+id/spnDeleteCategory"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@+id/txtDeleteCategory"
-        android:text="Change" />
+        <!-- TODO: Update blank fragment layout -->
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/btnDropTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/lblSettings"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Delete All Transactions"
+            android:textColor="#FF4444" />
+
+        <TextView
+            android:id="@+id/lblSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:text="Settings"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/lblCatSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btnDropTable"
+            android:layout_marginBottom="5dp"
+            android:text="Category Settings:"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/lblAddCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/lblCatSettings"
+            android:layout_marginBottom="5dp"
+            android:text="Add a Category:"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/txtAddCategory"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btnAddCategory"
+            android:layout_alignBottom="@+id/btnAddCategory"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/lblAddCategory"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/lblChangeCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/txtAddCategory"
+            android:layout_marginTop="5dp"
+            android:text="Change Category:"
+            android:textSize="15dp" />
+
+        <Spinner
+            android:id="@+id/spnChangeCategory"
+            android:layout_width="150dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/lblChangeCategory" />
+
+        <Button
+            android:id="@+id/btnAddCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblAddCategory"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/txtAddCategory"
+            android:text="Add (+)" />
+
+        <Button
+            android:id="@+id/btnChangeCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtChangeCategory"
+            android:layout_below="@+id/spnChangeCategory"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/txtChangeCategory"
+            android:text="Change" />
+
+        <EditText
+            android:id="@+id/txtChangeCategory"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/spnChangeCategory"
+            android:ems="10" />
+
+        <Spinner
+            android:id="@+id/spnDeleteCategory"
+            android:layout_width="150dp"
+            android:layout_height="38dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/lblDeleteCategory" />
+
+        <EditText
+            android:id="@+id/txtDeleteCategory"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/spnDeleteCategory"
+            android:ems="10" />
+
+        <TextView
+            android:id="@+id/lblDeleteCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/txtChangeCategory"
+            android:layout_marginTop="5dp"
+            android:text="Delete Category:"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="Back" />
+
+        <Button
+            android:id="@+id/btnDeleteCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtDeleteCategory"
+            android:layout_below="@+id/spnDeleteCategory"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/txtDeleteCategory"
+            android:text="Change" />
+    </RelativeLayout>
+
+</FrameLayout>

@@ -13,6 +13,23 @@ import android.os.Build;
 import android.database.sqlite.*;
 
 public class Checking extends Activity {
+	
+	interface MyCallbackClass{
+		void callbackReturn();
+	}
+	
+	MyCallbackClass settingsCbkClass;
+	MyCallbackClass detailTransCbkClass;
+	MyCallbackClass inputTransCbkClass;
+	MyCallbackClass editTransCbkClass;
+	
+	void registerCallback(MyCallbackClass settingsCbk, MyCallbackClass detailTransCbk, MyCallbackClass inputTransCbk, MyCallbackClass editTransCbk)
+	{
+		settingsCbkClass = settingsCbk;
+		detailTransCbkClass = detailTransCbk;
+		inputTransCbkClass = inputTransCbk;
+		editTransCbkClass = editTransCbk;		
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +38,7 @@ public class Checking extends Activity {
 		if (savedInstanceState == null) {
 			getFragmentManager().beginTransaction().add(R.id.container, new PlaceholderFragment()).commit();
 		}
+		//setContentView(R.layout.fragment_viewtrans);
 	}
 
 	@Override
