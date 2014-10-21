@@ -65,7 +65,7 @@
         android:layout_below="@id/acctbal"
         android:layout_toRightOf="@id/Payee"
         android:layout_marginBottom="10dp"
-        android:paddingLeft="75dp"
+        android:paddingLeft="60dp"
         android:paddingRight="0dp"
         android:text="Amount"
         android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -87,9 +87,9 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/Type"
         android:layout_alignBottom="@+id/Type"
-        android:layout_alignRight="@+id/layout_frag_viewtransdata"
         android:layout_toRightOf="@+id/Type"
-        android:layout_marginRight="43dp"
+        android:paddingLeft="75dp"
+        android:paddingRight="0dp"
         android:text="Category"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -99,7 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/acctbal"
         android:layout_toRightOf="@+id/Amount"        
-        android:paddingLeft="65dp"
+        android:paddingLeft="45dp"
         android:paddingRight="0dp"
         android:text="Type"
         android:textAppearance="?android:attr/textAppearanceMedium" />

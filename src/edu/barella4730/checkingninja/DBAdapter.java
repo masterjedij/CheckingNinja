@@ -81,4 +81,35 @@ public class DBAdapter
 		initialValues.put(KEY_CATEGORY, category);
 		return db.insert(DATABASE_TABLE, null, initialValues);
 	}
+	
+	public boolean deleteTrans(long rowId)
+	{
+		return db.delete(DATABASE_TABLE, KEY_ROWID + "=" + rowId, null) > 0;
+	}
+	
+	public Cursor getAllTrans()
+	{
+		return db.query(DATABASE_TABLE, new String[] {KEY_ROWID, KEY_PAYEE, KEY_AMOUNT, KEY_TYPE, KEY_CATEGORY}, null, null, null, null, null);
+	}
+	
+	public Cursor getTrans(long rowId) throws SQLException
+	{
+		Cursor mCursor = db.query(DATABASE_TABLE, new String[] {KEY_ROWID, KEY_PAYEE, KEY_AMOUNT, KEY_TYPE, KEY_CATEGORY}, KEY_ROWID + "=" + rowId, null, null, null, null, null);
+		
+		if (mCursor != null){
+			mCursor.moveToFirst();
+		}
+		return mCursor;
+	}
+	
+	public long updateTrans(long rowId, String date, String payee, String amount, String type, String category)
+	{
+		ContentValues args = new ContentValues();
+		args.put(KEY_DATE, date);
+		args.put(KEY_PAYEE, payee);
+		args.put(KEY_AMOUNT, amount);
+		args.put(KEY_TYPE, type);
+		args.put(KEY_CATEGORY, category);
+		return db.update(DATABASE_TABLE, args, KEY_ROWID + "=" + rowId, null);
+	}
 }

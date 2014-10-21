@@ -1,5 +1,7 @@
 package edu.barella4730.checkingninja;
 
+import java.util.Date;
+
 import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
@@ -58,6 +60,7 @@ public class Inputtrans extends Fragment {
 			mParam1 = getArguments().getString(ARG_PARAM1);
 			mParam2 = getArguments().getString(ARG_PARAM2);
 		}
+		Date transDate = new Date();
 	}
 
 	@Override
